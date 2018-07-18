@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Form Solution</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <h1>Register</h1>
+    <form>
+        <p>
+            <label for="firstName">First Name: </label>
+            <input type="text" id="firstName" name="firstName" required>
+    
+            <label for="lastName">Last Name: </label>
+            <input type="text" id="lastName" name="lastName" required>
+        </p>
+
+        <p>
+            <label for="maleRadio">Male: </label>
+            <input type="radio" id="maleRadio" name="gender" value="Male">
+
+            <label for="femaleRadio">Female: </label>
+            <input type="radio" name="gender" id="femaleRadio" value="Female">            
+        </p>
+
+        <p>
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="email" required>
+
+            <label for="password">Password: </label>
+            <input type="password" id="password" minlength="8" required>
+        </p>
+
+        <p>
+            <label for="birthday">Birthday: </label>
+            <select name="month" id="birthday">
+                <option>Month</option>
+                <option>May</option>
+                <option>July</option>
+            </select>
+            <select name="day" id="birthday">
+                <option>Day</option>
+                <option>6</option>
+                <option>24</option>
+            </select>
+            <select name="year" id="birthday">
+                <option value="Year">Year</option>
+                <option>1993</option>
+                <option>1999</option>
+            </select>
+        </p>
+
+        <p>
+            <label for="agreement">I agree to the terms and conditions</label>
+            <input type="checkbox" id="agreement" name="agreementAccepted" value="Yes" required>
+        </p>
+
+        <p>
+            <button>Submit</button>
+        </p>
+
+    </form>
+</body>
+</html>
