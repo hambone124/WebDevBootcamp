@@ -1,0 +1,20 @@
+h1 {
+    color: rgba(200, 100, 50, 1);
+    border-color: purple;
+    border-width: 5px;
+    border-style: dashed;
+}
+
+li {
+    color: red;
+}
+
+h4 {
+    color: purple;
+}
+
+body {
+    background: url(https://media.istockphoto.com/photos/high-res-wooden-texture-background-picture-id509055470?s=2048x2048);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
