@@ -8,26 +8,22 @@ font-family: 'Source Sans Pro', sans-serif;*/
 
 body {
     border: 20px solid #bdc3c7;
-    width: 1000px;
+    width: 80%;
+    max-width: 700px;
     margin: 20px auto;
     padding: 0px 20px;
+    font-family: 'Source Sans Pro';
 }
 
 h2 {
-    font-family: 'Source Sans Pro';
     text-transform: uppercase;
     color: #3498db;
-    letter-spacing: 0.5ch;
+    letter-spacing: 0.2rem;
 }
 
 h1 {
     text-transform: capitalize;
-    font-family: 'Source Sans Pro';
     font-weight: bolder;
-}
-
-p {
-    font-family: 'Source Sans Pro';
 }
 
 p:nth-of-type(1) {
