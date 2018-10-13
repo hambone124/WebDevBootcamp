@@ -40,6 +40,7 @@ function max(array) {
 // let arr = [9,5,7,1,3,10];
 let arr = [1,1,1,1,1];
 
+
 printReverse(arr);
 isUniform(arr);
 sumArray(arr);
