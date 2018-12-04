@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Refresh Rate Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body, html, canvas {
+            height: 100%;
+            width: 100%;
+            margin: 0px;
+            background-color: black;
+        }
+    </style>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.0/paper-full.js"></script>
+    <script type="text/paperscript" canvas="display">
+        var framerate60 = 1000/60;
+        var framerate30 = 1000/30;
+        var framerate15 = 1000/15;
+        
+        var textMax = new PointText(new Point(20,30));
+        textMax.fillColor = 'white';
+        textMax.content = 'Max Hz';
+
+        var textMax = new PointText(new Point(20,130));
+        textMax.fillColor = 'white';
+        textMax.content = '60 Hz';
+
+        var textMax = new PointText(new Point(20,230));
+        textMax.fillColor = 'white';
+        textMax.content = '30 Hz';
+
+        var textMax = new PointText(new Point(20,330));
+        textMax.fillColor = 'white';
+        textMax.content = '15 Hz';
+
+        var circleMax = new Path.Circle(0,70,15);
+        circleMax.fillColor='white'
+        var circle60 = new Path.Circle(0,170,15);
+        circle60.fillColor='white'
+        var circle30 = new Path.Circle(0,270,15);
+        circle30.fillColor='white'
+        var circle15 = new Path.Circle(0,370,15);
+        circle15.fillColor='white'
+
+        var direction = 10;
+        function onFrame(event){
+            console.log(circleMax.position.x);
+            circleMax.position.x += direction;
+            if (circleMax.position.x < 0 || circleMax.position.x > view.size.width){
+                direction *= -1;
+            }
+        }
+
+        setInterval(function(){
+            circle60.position.x = circleMax.position.x
+        }, framerate60);
+
+        setInterval(function(){
+            circle30.position.x = circleMax.position.x
+        }, framerate30);
+
+        setInterval(function(){
+            circle15.position.x = circleMax.position.x
+        }, framerate15);
+
+    </script>
+</head>
+<body>
+    <canvas id="display" resize></canvas>
+</body>
+</html>
